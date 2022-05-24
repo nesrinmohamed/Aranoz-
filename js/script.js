@@ -52,5 +52,12 @@ $('.countdown').dsCountDown({
         // $(window).scrollTop(0)
         $('html,body').animate({scrollTop: '0'})
     })
+    // animate section
+    $('.navbar .nav-link').click(function(){
+        let aHref = $(this).attr("href")
+        console.log(aHref);
+        $('html , body').animate({scrollTop:$(aHref).offset().top-120}, 1000 )
+
+    })
 })
 
