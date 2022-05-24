@@ -30,5 +30,27 @@ $('.countdown').dsCountDown({
     endDate:new Date("May 24, 2022 23:59:00")
     });
     
+    //search
+    $('#search').click(function(){
+        $('.form-group').slideToggle(400)
+    })
+    $('.close').click(function(){
+        $('.form-group').slideUp(400)
+    })
+
+    //btnUp
+    $(window).scroll(function(){
+        let wScroll = $(window).scrollTop();
+        // console.log(wScroll)
+        if(wScroll >= 550){
+            $('.butUp').fadeIn(400);
+        }else{
+            $('.butUp').fadeOut(400);
+        }
+    }) 
+    $('.butUp').click(function(){
+        // $(window).scrollTop(0)
+        $('html,body').animate({scrollTop: '0'})
+    })
 })
 
